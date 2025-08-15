@@ -69,10 +69,10 @@ export default function ContactPage() {
 
                         {/* Quote */}
                         <blockquote className="mt-10 italic text-gray-600 border-l-4 border-[#F9B233] pl-4">
-                            Our villages aren't just places on a map – they're the heart of
-                            Uttarakhand's identity. This conference represents our commitment
+                            &quot;Our villages aren&apos;t just places on a map – they&apos;re the heart of
+                            Uttarakhand&apos;s identity. This conference represents our commitment
                             to preserving that heart while giving it the strength to thrive in
-                            the modern world.
+                            the modern world.&quot;
                             <footer className="mt-2 text-sm text-gray-500">
                                 – Village Pradhan, Pauri Garhwal
                             </footer>
