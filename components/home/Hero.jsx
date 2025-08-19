@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import heroMobile from "@/public/hero-mobile.png";
 import heroTablet from "@/public/hero-tablet.png";
 import heroLaptop from "@/public/hero-laptop.png";
+import Link from "next/link";
 
 export default function Hero() {
     const { t } = useTranslation();
@@ -75,12 +76,12 @@ export default function Hero() {
 
                 {/* CTA Button */}
                 <div className="mt-10">
-                    <a
-                        href="#register"
+                    <Link
+                        href="/register"
                         className="inline-block bg-[#F9B233] text-white font-inter text-base sm:text-lg font-semibold px-8 py-4 rounded-lg shadow-2xl hover:bg-[#E6A32B] hover:shadow-xl hover:scale-105 transition-all duration-300 ease-out border border-[#F9B233] hover:border-[#E6A32B] backdrop-blur-sm"
                     >
                         {t('hero.cta')}
-                    </a>
+                    </Link>
                 </div>
             </div>
 
