@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Why() {
     return (
         <section className="relative w-full bg-white pt-16 sm:pt-20 scroll-mt-16 sm:scroll-mt-16" id="about">
@@ -28,7 +30,9 @@ export default function Why() {
 
                 {/* Image */}
                 <div className="relative w-full h-72 sm:h-96 lg:h-full rounded-lg overflow-hidden shadow-lg">
-                    <img
+                    <Image
+                        width={2048}
+                        height={2048}
                         src="/Palayan.png"
                         alt="Why Uttarakhand Needs Model Villages"
                         className="w-full h-full object-cover duration-500"

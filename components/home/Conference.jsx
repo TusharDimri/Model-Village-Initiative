@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Conference() {
     const details = [
         {
@@ -48,7 +50,9 @@ export default function Conference() {
 
                 {/* Right Image (Visible only on large screens) */}
                 <div className="hidden lg:block">
-                    <img
+                    <Image
+                        width={1792}
+                        height={2650}
                         src="/Conference.png"
                         alt="Conference"
                         className="w-full h-full object-cover rounded-xl shadow-lg border border-[#F9B233]/30"

@@ -1,5 +1,6 @@
 "use client";
 import { Zap, Server, Sprout } from "lucide-react";
+import Image from "next/image";
 
 export default function Ideas() {
     const ideas = [
@@ -29,10 +30,12 @@ export default function Ideas() {
                 
                 {/* Left Image */}
                 <div className="relative lg:h-full flex items-center justify-center lg:col-span-1">
-                    <img
+                    <Image
+                        width={1024}
+                        height={1024}
                         src="/vision.png"
                         alt="Innovative Green Technologies"
-                        className="h-[90%] lg:h-[60%] object-cover"
+                        className="w-[80%] lg:w-auto  lg:h-[60%] object-cover mt-12 lg:mt-0"
                     />
                     {/* Overlay for better contrast on small screens */}
                     {/* <div className="lg:hidden absolute inset-0 bg-black/30"></div> */}

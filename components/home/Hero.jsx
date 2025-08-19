@@ -1,33 +1,53 @@
 "use client";
 
+import Image from "next/image";
+import heroMobile from "@/public/hero-mobile.png";
+import heroTablet from "@/public/hero-tablet.png";
+import heroLaptop from "@/public/hero-laptop.png";
+
 export default function Hero() {
     return (
         <section className="relative w-full h-[100vh]">
-            {/* Background Images */}
-            <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                    backgroundImage: `url('/hero-mobile.png')`,
-                }}
-            ></div>
-            <div
-                className="hidden sm:block absolute inset-0 bg-cover bg-center"
-                style={{
-                    backgroundImage: `url('/hero-tablet.png')`,
-                }}
-            ></div>
-            <div
-                className="hidden lg:block absolute inset-0 bg-cover bg-center"
-                style={{
-                    backgroundImage: `url('/hero-laptop.png')`,
-                }}
-            ></div>
+            {/* Mobile (default) */}
+            <div className="absolute inset-0">
+                <Image
+                    src={heroMobile}
+                    alt="Hero"
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                    priority // preload LCP for mobile viewers
+                />
+            </div>
 
-            {/* Softer gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/35 to-black/50"></div>
+            {/* Tablet (shown from sm) */}
+            <div className="hidden sm:block absolute inset-0">
+                <Image
+                    src={heroTablet}
+                    alt="Hero"
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                // Not priority by default - Next will lazy load unless you set priority
+                />
+            </div>
 
-            {/* Softer side vignette */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20"></div>
+            {/* Laptop/Desktop (shown from lg) */}
+            <div className="hidden lg:block absolute inset-0">
+                <Image
+                    src={heroLaptop}
+                    alt="Hero"
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                // You can also mark this one priority if desktop LCP matters.
+                />
+            </div>
+
+            {/* overlays */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/35 to-black/50 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20 pointer-events-none" />
+
 
             {/* Content */}
             <div className="relative z-10 flex flex-col justify-center items-center h-full px-6 text-center">

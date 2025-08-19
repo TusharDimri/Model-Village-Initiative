@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Stakeholders() {
     const stakeholders = [
         {
@@ -50,7 +52,9 @@ export default function Stakeholders() {
 
                 {/* Image Section - 1/3 */}
                 <div className="hidden  lg:flex relative lg:h-full w-auto flex items-center justify-center">
-                    <img
+                    <Image
+                        width={1024}
+                        height={1536}
                         src="/Stakeholders.png"
                         alt="Key Stakeholders"
                         className="w-auto h-[80%] object-cover rounded-lg"
