@@ -33,7 +33,7 @@ export default function Ideas() {
                     <Image
                         width={1024}
                         height={1024}
-                        src="/vision.png"
+                        src="/Vision.png"
                         alt="Innovative Green Technologies"
                         className="w-[80%] lg:w-full lg:h-[60%] object-cover mt-12 lg:mt-0"
                     />
