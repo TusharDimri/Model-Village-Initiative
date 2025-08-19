@@ -35,7 +35,7 @@ export default function Ideas() {
                         height={1024}
                         src="/vision.png"
                         alt="Innovative Green Technologies"
-                        className="w-[80%] lg:w-auto  lg:h-[60%] object-cover mt-12 lg:mt-0"
+                        className="w-[80%] lg:w-full lg:h-[60%] object-cover mt-12 lg:mt-0"
                     />
                     {/* Overlay for better contrast on small screens */}
                     {/* <div className="lg:hidden absolute inset-0 bg-black/30"></div> */}
