@@ -1,26 +1,26 @@
 "use client";
 import { Zap, Server, Sprout } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 export default function Ideas() {
+    const { t } = useTranslation();
+    
     const ideas = [
         {
-            title: "Bio-Energy & Fire Mitigation",
+            title: t('ideas.bioenergy.title'),
             icon: <Zap className="w-8 h-8 text-[#277A84]" />,
-            description:
-                "Projects focusing on compressed biogas (CBG), biodiesel, and bio-char offer tremendous potential. Research shows biochar improves soil fertility, reduces chemical fertilizer needs, and aids waste management while generating clean bioenergy."
+            description: t('ideas.bioenergy.description')
         },
         {
-            title: "Green IT Infrastructure",
+            title: t('ideas.greenit.title'),
             icon: <Server className="w-8 h-8 text-[#277A84]" />,
-            description:
-                "Data centers in Uttarakhand's cooler regions can utilize free cooling from mountain air, significantly cutting energy costs and emissions. Dehradun and nearby colder areas present ideal opportunities for sustainable digital infrastructure development."
+            description: t('ideas.greenit.description')
         },
         {
-            title: "Agro & Horticulture Value Addition",
+            title: t('ideas.agro.title'),
             icon: <Sprout className="w-8 h-8 text-[#277A84]" />,
-            description:
-                "Uttarakhand's potential for exporting high-value Himalayan crops, flowers, grains, and spices remains largely untapped. We'll explore cold-chain infrastructure, processing facilities, and agri-tourism models that can dramatically boost rural incomes."
+            description: t('ideas.agro.description')
         }
     ];
 
@@ -45,7 +45,7 @@ export default function Ideas() {
                 <div className="pt-16 px-6 sm:px-10 lg:pt-20 lg:col-span-2">
                     {/* Section Heading */}
                     <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#277A84] text-center mt-5 lg:mt-0">
-                        Innovative <span className="text-[#F9B233]">Green Technologies</span>
+                        {t('ideas.title')} <span className="text-[#F9B233]">{t('ideas.subtitle')}</span>
                     </h2>
                     <div className="mt-4 h-1 w-24 bg-[#F9B233] rounded block mx-auto"></div>
 

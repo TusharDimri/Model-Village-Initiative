@@ -1,22 +1,23 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 export default function Conference() {
+    const { t } = useTranslation();
+    
     const details = [
         {
-            title: "Venue",
-            description:
-                "The conference will be held in Dehradun, Uttarakhand – the gateway to the Himalayas and a strategic location accessible to both urban stakeholders and rural participants."
+            title: t('conference.venue.title'),
+            description: t('conference.venue.description')
         },
         {
-            title: "Dates",
-            description: "November 28–29, 2025"
+            title: t('conference.dates.title'),
+            description: t('conference.dates.description')
         },
         {
-            title: "Accommodation",
-            description:
-                "Partner hotels offering special rates for conference attendees. Extended stay packages available for those wishing to explore Uttarakhand's lesser-known attractions, supporting our balanced tourism vision."
+            title: t('conference.accommodation.title'),
+            description: t('conference.accommodation.description')
         }
     ];
 
@@ -27,7 +28,7 @@ export default function Conference() {
                 {/* Left Content */}
                 <div className="lg:col-span-2">
                     <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#277A84] text-center">
-                        Conference <span className="text-[#F9B233]">Details & Logistics</span>
+                        {t('conference.details.title')} <span className="text-[#F9B233]">{t('conference.details.subtitle')}</span>
                     </h2>
                     <div className="mt-4 h-1 w-24 bg-[#F9B233] rounded mx-auto"></div>
 

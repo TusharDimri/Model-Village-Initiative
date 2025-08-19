@@ -1,31 +1,30 @@
 "use client";
 import { Briefcase, HeartPulse, Home, TreePine } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Themes() {
+    const { t } = useTranslation();
+    
     const data = [
         {
-            title: "Migration & Employment",
+            title: t('themes.migration.title'),
             icon: <Briefcase className="w-8 h-8 text-[#277A84]" />,
-            description:
-                "Unemployment drives more than half of Uttarakhand's rural exodus. We'll explore innovative policies to create local jobs in green sectors, strengthening village economies and reversing the migration trend through sustainable enterprise models."
+            description: t('themes.migration.description')
         },
         {
-            title: "Healthcare Access",
+            title: t('themes.healthcare.title'),
             icon: <HeartPulse className="w-8 h-8 text-[#277A84]" />,
-            description:
-                "Remote villages often lack basic medical services. Our conference presents public–private partnership models bringing healthcare closer to isolated communities through telemedicine hubs, mobile clinics, and training local health workers."
+            description: t('themes.healthcare.description')
         },
         {
-            title: "Earthquake-Resilient Construction",
+            title: t('themes.construction.title'),
             icon: <Home className="w-8 h-8 text-[#277A84]" />,
-            description:
-                "Traditional Koti Banal and Kath-Khuni architectures feature raised platforms and wooden beams that provide superior stability during earthquakes. We'll showcase how these ancient techniques can be integrated with modern materials."
+            description: t('themes.construction.description')
         },
         {
-            title: "Sustainable Tourism",
+            title: t('themes.tourism.title'),
             icon: <TreePine className="w-8 h-8 text-[#004C54]" />,
-            description:
-                "By distributing visitors across new destinations, we can reduce overcrowding while improving revenues. Discover strategies for marketing authentic homestays, cultural experiences, and eco-tourism opportunities that benefit local communities."
+            description: t('themes.tourism.description')
         }
     ];
 
@@ -34,8 +33,8 @@ export default function Themes() {
             <div className="max-w-7xl mx-auto px-6">
                 {/* Section Heading */}
                 <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-[#277A84]">
-                    Conference Themes:{" "}
-                    <span className="text-[#F9B233]">Building Sustainable Solutions</span>
+                    {t('themes.title')}{" "}
+                    <span className="text-[#F9B233]">{t('themes.subtitle')}</span>
                 </h2>
                 <div className="mt-4 h-1 w-24 bg-[#F9B233] mx-auto rounded"></div>
 

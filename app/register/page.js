@@ -1,38 +1,36 @@
 "use client";
 import { Mic, Users, DollarSign } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Registration() {
+    const { t } = useTranslation();
+    
     const registrationData = [
         {
-            title: "Call for Speakers",
+            title: t('register.speakers.title'),
             icon: <Mic className="w-8 h-8 text-[#277A84]" />,
-            description:
-                "Submit your topic and presentation paper through our online portal. We're seeking innovative solutions in sustainable architecture, renewable energy, rural entrepreneurship, and digital connectivity for remote areas."
+            description: t('register.speakers.description')
         },
         {
-            title: "Technology Partners",
+            title: t('register.partners.title'),
             icon: <Users className="w-8 h-8 text-[#277A84]" />,
-            description:
-                "Showcase your solutions that address Uttarakhand's unique challenges. Opportunities for demonstrations, exhibitions, and direct connections with village implementation teams and investors."
+            description: t('register.partners.description')
         },
         {
-            title: "Investors & Financiers",
+            title: t('register.investors.title'),
             icon: <DollarSign className="w-8 h-8 text-[#277A84]" />,
-            description:
-                "Discover high-impact investment opportunities with strong ESG credentials. Connect with pre-vetted projects and explore co-financing options with government schemes and development funds."
+            description: t('register.investors.description')
         }
     ];
 
-    const whatsappMessage = encodeURIComponent(
-        "Hello, I’m interested in joining your initiative and event. Please share more details."
-    );
+    const whatsappMessage = encodeURIComponent(t('register.whatsappMessage'));
 
     return (
         <section className="bg-white py-16 px-6 sm:px-10 mt-[70px]">
             <div className="max-w-7xl mx-auto text-center">
                 {/* Heading */}
                 <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-[#277A84]">
-                    Registration & <span className="text-[#F9B233]">Participation</span>
+                    {t('register.title')} & <span className="text-[#F9B233]">{t('register.participation')}</span>
                 </h2>
                 <div className="mt-4 h-1 w-24 bg-[#F9B233] rounded mx-auto"></div>
 
@@ -59,12 +57,12 @@ export default function Registration() {
                 {/* WhatsApp Button */}
                 <div className="mt-12">
                     <a
-                        href={`https://wa.me/919876543210?text=${whatsappMessage}`}
+                        href={`https://wa.me/919811431604?text=${whatsappMessage}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block bg-[#F9B233] text-white text-lg font-medium px-8 py-4 rounded-lg shadow-md hover:bg-[#E6A32B] transition-all duration-300"
                     >
-                        Join Us
+                        {t('register.joinUs')}
                     </a>
                 </div>
             </div>

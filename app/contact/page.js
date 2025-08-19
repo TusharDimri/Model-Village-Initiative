@@ -3,12 +3,14 @@
 
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function ContactPage() {
-    const phoneNumber = "+911352555000";
-    const whatsappNumber = "911352555000"; // WhatsApp format without '+'
+    const { t } = useTranslation();
+    const phoneNumber = "+91 98114 31604";
+    const whatsappNumber = "919811431604"; // WhatsApp format without '+'
 
     return (
         <section className="bg-white py-16 mt-[70px]">
@@ -16,7 +18,7 @@ export default function ContactPage() {
                 {/* Heading */}
                 <div className="text-center mb-6 lg:mb-12">
                     <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#277A84]">
-                        Contact<span className="text-[#F9B233]"> & Support</span> 
+                        {t('contact.title')}<span className="text-[#F9B233]"> & {t('contact.support')}</span> 
                     </h2>
                     <div className="mt-4 mx-auto h-1 w-20 sm:w-24 bg-[#F9B233] rounded"></div>
                 </div>
@@ -26,18 +28,17 @@ export default function ContactPage() {
                     {/* Left Content */}
                     <div>
                         <h3 className="font-playfair text-xl font-semibold text-[#277A84] mb-4 t">
-                            Get in Touch
+                            {t('contact.getInTouch')}
                         </h3>
                         <p className="text-gray-700 mb-6">
-                            Have questions about the conference or how to get involved? Our
-                            team is ready to assist you:
+                            {t('contact.description')}
                         </p>
 
                         <ul className="space-y-4 text-gray-700 inline-block mx-auto lg:inline">
                             <li className="flex items-center justify-start gap-3">
                                 <MapPin className="text-[#F9B233]" size={20} />
                                 <span>
-                                    Conference Secretariat, Dehradun, Uttarakhand
+                                    {t('footer.address')}
                                 </span>
                             </li>
                             <li className="flex items-center justify-start gap-3">
@@ -46,7 +47,7 @@ export default function ContactPage() {
                             </li>
                             <li className="flex items-center justify-start gap-3">
                                 <Phone className="text-[#F9B233]" size={20} />
-                                <span>+91-135-2555000</span>
+                                <span>+91 98114 31604</span>
                             </li>
                         </ul>
 
@@ -63,18 +64,15 @@ export default function ContactPage() {
                                 href={`tel:${phoneNumber}`}
                                 className="flex items-center gap-2 bg-[#277A84] text-white px-5 py-3 rounded-lg hover:bg-[#1f5f67] transition"
                             >
-                                <Phone size={20} /> Call Now
+                                <Phone size={20} /> {t('contact.callNow')}
                             </Link>
                         </div>
 
                         {/* Quote */}
                         <blockquote className="mt-10 italic text-gray-600 border-l-4 border-[#F9B233] pl-4">
-                            &quot;Our villages aren&apos;t just places on a map – they&apos;re the heart of
-                            Uttarakhand&apos;s identity. This conference represents our commitment
-                            to preserving that heart while giving it the strength to thrive in
-                            the modern world.&quot;
+                            &quot;{t('contact.quote')}&quot;
                             <footer className="mt-2 text-sm text-gray-500">
-                                – Village Pradhan, Pauri Garhwal
+                                – {t('contact.quoteAuthor')}
                             </footer>
                         </blockquote>
                     </div>

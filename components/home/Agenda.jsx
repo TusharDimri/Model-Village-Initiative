@@ -1,18 +1,20 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
+
 export default function Agenda() {
+    const { t } = useTranslation();
+    
     const agenda = [
         {
-            day: "Day 1: Vision, Workshops & Collaboration",
-            date: "November 28, 2025",
-            description:
-                "The inauguration ceremony will present our vision of Model Villages based on the Green Circular Economy, followed by keynote addresses from policy leaders and sustainable development experts. Investors and technology partners will be introduced, leading into hands-on workshops covering earthquake-proof construction, sustainable tourism models, and bio-energy solutions. Breakout sessions will facilitate collaborative opportunities, alongside technology showcases of IT and data-center solutions."
+            day: t('agenda.day1.title'),
+            date: t('agenda.day1.date'),
+            description: t('agenda.day1.description')
         },
         {
-            day: "Day 2: Interactive Sessions & Commitment",
-            date: "November 29, 2025",
-            description:
-                "Focused dialogues between village leaders, investors, and technology providers will aim to develop concrete implementation plans. Panel discussions will highlight successful rural transformation case studies from around the world. The conference will conclude with a plenary session on implementing the Green Circular Economy, a formal signing ceremony to onboard 50 villages and establish village-level limited companies, and finalization of investment commitments and technology partnership agreements."
+            day: t('agenda.day2.title'),
+            date: t('agenda.day2.date'),
+            description: t('agenda.day2.description')
         }
     ];
 
@@ -22,9 +24,9 @@ export default function Agenda() {
                 {/* Heading */}
                 <div className="text-center mb-12 sm:mb-16">
                     <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#277A84] leading-tight">
-                        Conference Agenda:{" "}
+                        {t('agenda.title')}{" "}
                         <span className="text-[#F9B233] block sm:inline mt-2 sm:mt-0">
-                            Two Days of Transformation
+                            {t('agenda.subtitle')}
                         </span>
                     </h2>
                     <div className="mt-6 mx-auto h-1 w-20 sm:w-24 bg-[#F9B233] rounded"></div>

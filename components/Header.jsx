@@ -1,13 +1,16 @@
 "use client";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import LanguageToggle from "./LanguageToggle";
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();
+    const { t } = useTranslation();
 
     const isHome = pathname === "/";
 
@@ -47,20 +50,21 @@ export default function Header() {
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex gap-8 text-sm font-medium">
-                    <Link href="/" className="hover:text-[#F9B233] transition">Home</Link>
-                    <Link href="/#about" className="hover:text-[#F9B233] transition">About</Link>
-                    <Link href="/#initiatives" className="hover:text-[#F9B233] transition">Initiatives</Link>
-                    <Link href="/#conference" className="hover:text-[#F9B233] transition">Conference</Link>
-                    <Link href="/contact" className="hover:text-[#F9B233] transition">Contact</Link>
+                    <Link href="/" className="hover:text-[#F9B233] transition">{t('nav.home')}</Link>
+                    <Link href="/#about" className="hover:text-[#F9B233] transition">{t('nav.about')}</Link>
+                    <Link href="/#initiatives" className="hover:text-[#F9B233] transition">{t('nav.initiatives')}</Link>
+                    <Link href="/#conference" className="hover:text-[#F9B233] transition">{t('nav.conference')}</Link>
+                    <Link href="/contact" className="hover:text-[#F9B233] transition">{t('nav.contact')}</Link>
                 </nav>
 
-                {/* CTA + Mobile Menu Button */}
+                {/* CTA + Language Toggle + Mobile Menu Button */}
                 <div className="flex items-center gap-4">
+                    <LanguageToggle scrolled={scrolled} />
                     <Link
                         href="/register"
                         className="hidden md:inline-block bg-[#F9B233] text-white px-4 py-2 rounded-lg hover:bg-[#E6A32B] transition"
                     >
-                        Register
+                        {t('nav.register')}
                     </Link>
                     <button
                         className="md:hidden p-2 rounded-lg transition hover:bg-white/10"
@@ -89,18 +93,25 @@ export default function Header() {
 
                     {/* Menu Items */}
                     <nav className="flex flex-col items-center justify-center flex-1 gap-6 text-lg font-medium text-gray-800">
-                        <Link href="/" className="hover:text-[#F9B233]" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-                        <Link href="/#about" className="hover:text-[#F9B233]" onClick={() => setMobileMenuOpen(false)}>About</Link>
-                        <Link href="/#initiatives" className="hover:text-[#F9B233]" onClick={() => setMobileMenuOpen(false)}>Initiatives</Link>
-                        <Link href="/#conference" className="hover:text-[#F9B233]" onClick={() => setMobileMenuOpen(false)}>Conference</Link>
-                        <Link href="/contact" className="hover:text-[#F9B233]" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+                        <Link href="/" className="hover:text-[#F9B233]" onClick={() => setMobileMenuOpen(false)}>{t('nav.home')}</Link>
+                        <Link href="/#about" className="hover:text-[#F9B233]" onClick={() => setMobileMenuOpen(false)}>{t('nav.about')}</Link>
+                        <Link href="/#initiatives" className="hover:text-[#F9B233]" onClick={() => setMobileMenuOpen(false)}>{t('nav.initiatives')}</Link>
+                        <Link href="/#conference" className="hover:text-[#F9B233]" onClick={() => setMobileMenuOpen(false)}>{t('nav.conference')}</Link>
+                        <Link href="/contact" className="hover:text-[#F9B233]" onClick={() => setMobileMenuOpen(false)}>{t('nav.contact')}</Link>
                         <Link
                             href="/register"
                             className="bg-[#F9B233] text-white px-6 py-3 rounded-lg hover:bg-[#E6A32B] transition"
                             onClick={() => setMobileMenuOpen(false)}
                         >
-                            Register
+                            {t('nav.register')}
                         </Link>
+                        {/* Mobile Language Toggle */}
+                        <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                            <div className="text-center mb-3">
+                                <p className="text-sm font-medium text-gray-700">Language / भाषा</p>
+                            </div>
+                            <LanguageToggle scrolled={true} />
+                        </div>
                     </nav>
                 </div>
             )}

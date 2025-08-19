@@ -1,23 +1,23 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 export default function Stakeholders() {
+    const { t } = useTranslation();
+    
     const stakeholders = [
         {
-            title: "Village Pradhans & Communities",
-            description:
-                "Elected village heads and community members are the heart of this initiative. Their leadership ensures projects preserve local culture, environment, and traditional knowledge while meeting actual community needs."
+            title: t('stakeholders.communities.title'),
+            description: t('stakeholders.communities.description')
         },
         {
-            title: "ESG-Focused Investors",
-            description:
-                "Investment opportunities span sustainable infrastructure, renewable energy, agri–processing units, IT facilities, and tourism projects – all offering competitive returns while creating lasting social and environmental impact."
+            title: t('stakeholders.investors.title'),
+            description: t('stakeholders.investors.description')
         },
         {
-            title: "Technology Partners",
-            description:
-                "Tech companies will provide IoT solutions for agriculture, modular data–center designs, telemedicine platforms, and disaster–resilient construction materials adapted to Uttarakhand's unique geography."
+            title: t('stakeholders.tech.title'),
+            description: t('stakeholders.tech.description')
         }
     ];
 
@@ -28,8 +28,8 @@ export default function Stakeholders() {
                 {/* Text Section - 2/3 */}
                 <div className="lg:col-span-2 px-6 sm:px-10 pt-12 lg:pt-20 flex flex-col justify-center">
                     <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#277A84] text-center">
-                        Key Stakeholders:{" "}
-                        <span className="text-[#F9B233]">Building Partnerships for Success</span>
+                        {t('stakeholders.title')}{" "}
+                        <span className="text-[#F9B233]">{t('stakeholders.subtitle')}</span>
                         <div className="mt-4 h-1 w-24 bg-[#F9B233] rounded block mx-auto"></div>
                     </h2>
 
