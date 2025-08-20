@@ -22,7 +22,7 @@ export default function Conference() {
     ];
 
     return (
-        <section className="bg-white py-16">
+        <section className="bg-white py-12 md:py-16">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 px-4 sm:px-6 lg:px-8 items-center">
 
                 {/* Left Content */}

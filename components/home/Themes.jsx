@@ -29,7 +29,7 @@ export default function Themes() {
     ];
 
     return (
-        <section className="bg-white pt-3 sm:pt-20 scroll-mt-3 sm:scroll-mt-16" id="initiatives">
+        <section className="bg-white pt-3 md:pt-12 scroll-mt-3 sm:scroll-mt-12" id="initiatives">
             <div className="max-w-7xl mx-auto px-6">
                 {/* Section Heading */}
                 <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-[#277A84]">

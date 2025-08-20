@@ -26,7 +26,7 @@ export default function Stakeholders() {
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3">
 
                 {/* Text Section - 2/3 */}
-                <div className="lg:col-span-2 px-6 sm:px-10 pt-12 lg:pt-20 flex flex-col justify-center">
+                <div className="lg:col-span-2 px-6 sm:px-10 pt-12 md:pt-16 flex flex-col justify-center">
                     <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#277A84] text-center">
                         {t('stakeholders.title')}{" "}
                         <span className="text-[#F9B233]">{t('stakeholders.subtitle')}</span>

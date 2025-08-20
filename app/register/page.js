@@ -26,7 +26,7 @@ export default function Registration() {
     const whatsappMessage = encodeURIComponent(t('register.whatsappMessage'));
 
     return (
-        <section className="bg-white py-16 px-6 sm:px-10 mt-[70px]">
+        <section className="bg-white py-12 md:py-16 px-6 sm:px-10 mt-[70px]">
             <div className="max-w-7xl mx-auto text-center">
                 {/* Heading */}
                 <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-[#277A84]">

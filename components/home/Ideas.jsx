@@ -42,7 +42,7 @@ export default function Ideas() {
                 </div>
 
                 {/* Right Content */}
-                <div className="pt-16 px-6 sm:px-10 lg:pt-20 lg:col-span-2">
+                <div className="px-6 sm:px-10 pt-12 md:pt-16 lg:col-span-2">
                     {/* Section Heading */}
                     <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#277A84] text-center mt-5 lg:mt-0">
                         {t('ideas.title')} <span className="text-[#F9B233]">{t('ideas.subtitle')}</span>

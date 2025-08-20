@@ -57,7 +57,7 @@ export default function LanguageToggle({ scrolled }) {
           onClick={() => setIsOpen(!isOpen)}
           disabled={isAnimating}
           className={`
-            group relative flex items-center gap-2 px-3 py-2 rounded-lg 
+            group relative  cursor-pointer flex items-center gap-2 px-3 py-2 rounded-lg 
             transition-all duration-300 ease-out
             ${scrolled 
               ? 'text-gray-700 hover:text-[#277A84] hover:bg-gray-50 border border-gray-200 hover:border-[#277A84]/30' 

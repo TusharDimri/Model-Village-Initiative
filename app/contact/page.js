@@ -13,11 +13,11 @@ export default function ContactPage() {
     const whatsappNumber = "919811431604"; // WhatsApp format without '+'
 
     return (
-        <section className="bg-white py-16 mt-[70px]">
+        <section className="bg-white py-12 md:py-16 mt-[70px]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 {/* Heading */}
                 <div className="text-center mb-6 lg:mb-12">
-                    <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#277A84]">
+                    <h2 className="font-playfair  text-3xl sm:text-4xl font-bold text-[#277A84]">
                         {t('contact.title')}<span className="text-[#F9B233]"> & {t('contact.support')}</span> 
                     </h2>
                     <div className="mt-4 mx-auto h-1 w-20 sm:w-24 bg-[#F9B233] rounded"></div>

@@ -19,7 +19,7 @@ export default function Agenda() {
     ];
 
     return (
-        <section className="bg-white pt-12 sm:pt-16 scroll-mt-12 sm:scroll-mt-16" id="conference">
+        <section className="bg-white pt-12 md:pt-16 scroll-mt-12 md:scroll-mt-16" id="conference">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 {/* Heading */}
                 <div className="text-center mb-12 sm:mb-16">

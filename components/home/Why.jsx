@@ -7,7 +7,7 @@ export default function Why() {
     const { t } = useTranslation();
 
     return (
-        <section className="relative w-full bg-white pt-16 sm:pt-20 scroll-mt-16 sm:scroll-mt-16" id="about">
+        <section className="relative w-full bg-white pt-12 md:pt-16 scroll-mt-12 sm:scroll-mt-16" id="about">
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 
                 {/* Text Content */}
